@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Awake()
     {
-        _interactableObjectsMask = LayerMask.GetMask("Interactable object");
+        _interactableObjectsMask = LayerMask.GetMask(CONSTANTS.INTERACTABLE_OBJECTS_LAYER_NAME);
     }
 
     private void OnEnable()
@@ -175,6 +175,7 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
+
     private void OnThrowItemClicked()
     {
         _character.ThrowItem();
